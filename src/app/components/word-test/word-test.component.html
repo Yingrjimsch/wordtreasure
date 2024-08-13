@@ -1,0 +1,22 @@
+<mat-card appearance="outlined">
+  <mat-card-content>
+    @if (!isTestOngoing) {
+      <h2>Are you ready to start the test?</h2>
+      <button mat-raised-button (click)="start()">Start</button>
+      @if (testWordTreasure.length != 0) {
+        <div>
+          <h3>{{ getPassMessage() }}</h3>
+          <p>Correct Percentage: {{ getCorrectPercentage() }}%</p>
+        </div>
+      }
+    }
+    @if (isTestOngoing) {
+      <countdown #cd (event)="handleDone($event)" [config]="countdownConfig" />
+      <h2>{{ currentWord().shownWord }}</h2>
+      <mat-form-field>
+        <input matInput [formControl]="hiddenWord" required />
+      </mat-form-field>
+      <button mat-raised-button (click)="next()">Next</button>
+    }
+  </mat-card-content>
+</mat-card>

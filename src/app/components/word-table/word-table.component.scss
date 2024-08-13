@@ -1,0 +1,57 @@
+// Styling for the table container
+.mat-elevation-z8 {
+  margin: 20px 0; // Add margin above and below the table
+  padding: 20px; // Add padding inside the table container
+  border-radius: 12px; // Rounded corners for the table
+  background-color: #ffffff; // White background for a clean look
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); // Soft shadow for depth
+}
+
+// Styling for the table headers
+th.mat-header-cell {
+  font-weight: bold; // Make header text bold
+  text-align: center; // Center align text in headers
+  padding: 16px 8px; // Add padding inside header cells
+  background-color: #f0f0f0; // Light grey background for headers
+  color: #333333; // Darker color for header text
+}
+
+// Styling for the table cells
+td.mat-cell {
+  padding: 12px 8px; // Add padding inside regular cells
+  text-align: center; // Center align text in cells
+  color: #555555; // Slightly muted text color for better readability
+}
+
+// Styling for action buttons inside the table
+td.mat-cell button {
+  margin: 0 5px; // Add space between action buttons
+  color: #6200ea; // Primary color for the action buttons
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #3700b3; // Darken color on hover for the buttons
+  }
+}
+
+// Styling for the toolbar container
+mat-toolbar {
+  margin: 20px 0; // Margin above and below the toolbar
+  padding: 10px 20px; // Padding inside the toolbar
+  background-color: #6200ea; // Primary color for the toolbar background
+  border-radius: 8px; // Rounded corners for the toolbar
+  color: #ffffff; // White text color for contrast
+  display: flex;
+  justify-content: flex-end; // Align buttons to the right
+}
+
+// Styling for buttons inside the toolbar
+mat-toolbar-row button {
+  margin-left: 10px; // Space between toolbar buttons
+  color: #ffffff; // White icon color for better visibility
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #03dac6; // Change icon color on hover for contrast
+  }
+}

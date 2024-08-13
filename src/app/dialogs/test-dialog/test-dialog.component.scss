@@ -1,0 +1,65 @@
+// Styling for the dialog title
+h2[mat-dialog-title] {
+  font-size: 1.8rem; // Increase font size for emphasis
+  color: #6200ea; // Primary color for the title text
+  text-align: center; // Center the title within the dialog
+  margin-bottom: 20px; // Space below the title
+}
+
+// Styling for the dialog content
+mat-dialog-content {
+  display: flex;
+  flex-direction: column; // Stack form fields vertically
+  gap: 16px; // Space between each form field
+}
+
+// Styling for the form fields
+mat-form-field {
+  width: 100%; // Full width to match the dialog's width
+
+  input {
+    padding: 10px; // Padding inside the input field
+    border-radius: 8px; // Rounded corners for the input field
+  }
+
+  mat-error {
+    color: #d32f2f; // Red color for error messages
+    font-size: 0.9rem; // Slightly smaller font size for error messages
+    margin-top: 5px; // Space above the error message
+  }
+}
+
+// Styling for dialog actions (buttons)
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end; // Align buttons to the right
+  gap: 10px; // Space between the buttons
+  margin-top: 20px; // Space above the buttons
+
+  button[mat-button] {
+    padding: 10px 20px; // Padding inside the button for better click area
+    background-color: #03dac6; // Secondary color for the button background
+    color: #ffffff; // White text color for contrast
+    font-weight: bold; // Bold text for emphasis
+    border-radius: 8px; // Rounded corners for the button
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #018786; // Darken the button background on hover
+    }
+
+    &:disabled {
+      background-color: #ccc; // Grey background for disabled state
+      color: #777; // Muted text color for disabled state
+    }
+  }
+
+  button[mat-button]:first-child {
+    background-color: transparent; // Transparent background for the cancel button
+    color: #6200ea; // Primary color for the cancel button text
+
+    &:hover {
+      background-color: #f0f0f0; // Light grey background on hover
+    }
+  }
+}

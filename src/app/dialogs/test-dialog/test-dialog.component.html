@@ -1,0 +1,56 @@
+<h2 mat-dialog-title>Add/Edit word</h2>
+<mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <mat-label>Enter Number of Words</mat-label>
+    <input
+      type="number"
+      matInput
+      [formControl]="numberOfWords"
+      (blur)="updateErrorMessage()"
+      required
+    />
+    @if (numberOfWords.invalid) {
+      <mat-error>{{ errorMessage() }}</mat-error>
+    }
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="outline">
+    <mat-label>Enter Passing Percentage</mat-label>
+    <input
+      type="number"
+      matInput
+      [formControl]="passingPercentage"
+      (blur)="updateErrorMessage()"
+      required
+    />
+    @if (passingPercentage.invalid) {
+      <mat-error>{{ errorMessage() }}</mat-error>
+    }
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="outline">
+    <mat-label>Enter Time in Seconds</mat-label>
+    <input
+      type="number"
+      matInput
+      [formControl]="timeInSeconds"
+      (blur)="updateErrorMessage()"
+      required
+    />
+    @if (timeInSeconds.invalid) {
+      <mat-error>{{ errorMessage() }}</mat-error>
+    }
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button
+    mat-button
+    (click)="start()"
+    [disabled]="
+      !numberOfWords.valid || !passingPercentage.valid || !timeInSeconds.valid
+    "
+  >
+    Start
+  </button>
+</mat-dialog-actions>

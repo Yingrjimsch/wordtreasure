@@ -1,0 +1,54 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+  <!-- word Column -->
+  <ng-container matColumnDef="word">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Domestic Language</th>
+    <td mat-cell *matCellDef="let element">{{ element.word }}</td>
+  </ng-container>
+
+  <!-- foreignWord Column -->
+  <ng-container matColumnDef="foreignWord">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Foreign Language</th>
+    <td mat-cell *matCellDef="let element">{{ element.foreignWord }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let element">
+      <button
+        (click)="insert(element)"
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+      >
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button
+        (click)="delete(element)"
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button
+      (click)="insert()"
+      mat-icon-button
+      aria-label="Example icon button with a vertical three dot icon"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+    <button
+      (click)="clearWordTreasure()"
+      mat-icon-button
+      aria-label="Example icon button with a vertical three dot icon"
+    >
+      <mat-icon>delete_forever</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

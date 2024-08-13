@@ -1,0 +1,77 @@
+// Styling for the mat-card container
+mat-card {
+  max-width: 450px; // Limit the card's width for better readability
+  margin: 20px auto; // Center the card horizontally with margin
+  padding: 20px; // Padding inside the card
+  border-radius: 12px; // Rounded corners for a modern look
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); // Soft shadow for depth
+  background-color: #ffffff; // White background for a clean look
+
+  // Border styling for outlined appearance
+  border: 1px solid #e0e0e0; // Light grey border for the outlined card appearance
+}
+
+// Styling for the card content area
+mat-card-content {
+  display: flex;
+  flex-direction: column; // Stack elements vertically
+  align-items: center; // Center elements horizontally within the card
+  gap: 20px; // Space between each element
+}
+
+// Styling for the h2 header
+h2 {
+  margin: 0; // Remove default margin
+  font-size: 1.8rem; // Larger font size for emphasis
+  color: #6200ea; // Primary color for the text
+  text-align: center; // Center the text within the card
+}
+
+// Styling for the h3 header (test results message)
+h3 {
+  margin: 0; // Remove default margin
+  font-size: 1.4rem; // Medium font size for emphasis
+  color: #388e3c; // Green color for success message
+  text-align: center; // Center the text within the card
+}
+
+// Styling for the paragraph text (correct percentage)
+p {
+  margin: 0; // Remove default margin
+  font-size: 1rem; // Regular font size
+  color: #333333; // Dark color for readability
+  text-align: center; // Center the text within the card
+}
+
+// Styling for the buttons
+button[mat-raised-button] {
+  padding: 10px 24px; // Padding inside the button
+  background-color: #03dac6; // Secondary color for the button background
+  color: #ffffff; // White text color for contrast
+  font-weight: bold; // Bold text for emphasis
+  border-radius: 8px; // Rounded corners for the button
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #018786; // Darken the button background on hover
+  }
+}
+
+// Styling for the mat-form-field
+mat-form-field {
+  width: 100%; // Full width to match the card's width
+  margin-top: 16px; // Space above the form field
+
+  input {
+    padding: 10px; // Padding inside the input field
+    border-radius: 8px; // Rounded corners for the input field
+  }
+}
+
+// Styling for the countdown component
+countdown {
+  font-size: 1.5rem; // Font size for the countdown timer
+  color: #d32f2f; // Red color for urgency
+  margin-bottom: 16px; // Space below the countdown timer
+  text-align: center; // Center the countdown timer within the card
+}

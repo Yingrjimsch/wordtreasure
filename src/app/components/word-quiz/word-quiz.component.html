@@ -1,0 +1,19 @@
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <h2>{{ currentWord.shownWord }}</h2>
+    <mat-form-field>
+      <input
+        [disabled]="message() != ''"
+        matInput
+        [formControl]="hiddenWord"
+        required
+      />
+    </mat-form-field>
+    @if (message() != "") {
+      <h2>{{ message() }}</h2>
+    }
+    <button [disabled]="message() != ''" mat-raised-button (click)="check()">
+      Check
+    </button>
+  </mat-card-content>
+</mat-card>

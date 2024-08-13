@@ -1,0 +1,78 @@
+// Styling for the dialog title
+h2[mat-dialog-title] {
+  font-size: 1.8rem; // Larger font size for the title
+  color: #6200ea; // Primary color for emphasis
+  text-align: center; // Center the title within the dialog
+  margin-bottom: 20px; // Space below the title for separation
+}
+
+// Styling for the dialog content
+mat-dialog-content {
+  display: flex;
+  flex-direction: column; // Stack form fields vertically
+  gap: 20px; // Space between each form field
+
+  mat-form-field {
+    width: 100%; // Make form fields full width
+    margin-bottom: 10px; // Space below each form field
+
+    mat-label {
+      color: #333; // Dark color for form field labels
+      font-size: 1rem; // Standard font size for labels
+    }
+
+    input {
+      padding: 10px; // Padding inside the input fields
+      border-radius: 8px; // Rounded corners for a modern look
+    }
+
+    mat-error {
+      color: #d32f2f; // Red color for error messages
+      font-size: 0.9rem; // Slightly smaller font for errors
+      margin-top: 5px; // Space above the error messages
+    }
+  }
+
+  br {
+    display: none; // Remove the unnecessary <br /> elements
+  }
+}
+
+// Styling for dialog actions (buttons)
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end; // Align buttons to the right
+  gap: 10px; // Space between buttons
+  margin-top: 20px; // Space above the buttons for separation
+
+  button[mat-button] {
+    padding: 10px 20px; // Padding inside the buttons for larger click area
+    font-weight: bold; // Bold text for emphasis
+    border-radius: 8px; // Rounded corners for buttons
+    transition: background-color 0.3s ease;
+
+    &:first-child {
+      background-color: transparent; // Transparent background for cancel button
+      color: #6200ea; // Primary color for the cancel button text
+      border: 1px solid #6200ea; // Border to match the text color
+
+      &:hover {
+        background-color: #f0f0f0; // Light grey background on hover
+      }
+    }
+
+    &:last-child {
+      background-color: #03dac6; // Secondary color for the add button
+      color: #ffffff; // White text color for contrast
+
+      &:hover {
+        background-color: #018786; // Darker shade on hover
+      }
+
+      &:disabled {
+        background-color: #ccc; // Grey background when disabled
+        color: #777; // Muted text color for disabled state
+      }
+    }
+  }
+}

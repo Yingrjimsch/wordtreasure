@@ -1,0 +1,53 @@
+// General styles for the main container
+.main {
+  display: flex;
+  justify-content: center; // Center horizontally
+  align-items: center; // Center vertically
+  height: 100vh; // Full viewport height
+  background-color: #f5f5f5; // Light grey background to contrast the content
+  padding: 20px; // Some padding around the edges
+  box-sizing: border-box;
+}
+
+// Styling for the content container
+.content {
+  background-color: #ffffff; // White background for content area
+  border-radius: 12px; // Rounded corners
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); // Soft shadow for depth
+  max-width: 600px; // Limit the width for better readability
+  width: 100%; // Full width up to the max-width
+  padding: 20px; // Padding inside the content box
+  box-sizing: border-box;
+}
+
+// Styling for Angular Material Tab Group
+mat-tab-group {
+  width: 100%; // Ensure the tab group takes full width of the content container
+  margin-bottom: 20px; // Space below the tab group
+}
+
+// Styling for Angular Material Tabs
+mat-tab {
+  font-weight: bold; // Make the tab labels bold
+  text-align: center; // Center the text inside the tabs
+  &.mat-tab-disabled {
+    color: rgba(0, 0, 0, 0.38); // Slightly muted color for disabled tabs
+  }
+}
+
+// Specific styling for the word components
+app-word-table,
+app-word-quiz,
+app-word-test {
+  display: block; // Block display to ensure they take full width
+  padding: 20px; // Inner padding for the word components
+  background-color: #fafafa; // Light background for the inner components
+  border-radius: 8px; // Slightly rounded corners
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05); // Subtle shadow for depth
+}
+
+// Adjust the appearance of the router outlet for better alignment
+router-outlet {
+  display: block;
+  margin-top: 40px; // Space between the content and router outlet
+}

@@ -1,0 +1,28 @@
+<main class="main">
+  <div class="content">
+    <mat-tab-group>
+      <mat-tab [disabled]="isTestOngoing" label="Edit">
+        <ng-template matTabContent>
+          <app-word-table></app-word-table>
+        </ng-template>
+      </mat-tab>
+      <mat-tab
+        [disabled]="isTestOngoing || wordTreasureService.get().length == 0"
+        label="Train"
+      >
+        <ng-template matTabContent>
+          <app-word-quiz></app-word-quiz>
+        </ng-template>
+      </mat-tab>
+      <mat-tab [disabled]="wordTreasureService.get().length == 0" label="Test">
+        <ng-template matTabContent>
+          <app-word-test
+            [isTestOngoing]="isTestOngoing"
+            (changeOngoingTest)="changeOngoingTest()"
+          ></app-word-test>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</main>
+<router-outlet />
